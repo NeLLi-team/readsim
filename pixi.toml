@@ -1,0 +1,19 @@
+[project]
+name = "read-simulator"
+version = "0.1.0"
+description = "Illumina read simulator for metagenomic data"
+authors = ["Your Name <your.email@example.com>"]
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "osx-64"]
+
+[dependencies]
+python = ">=3.9"
+art = "*"         # ART for read simulation
+bbmap = "*"       # BBMAP for genome fragmentation
+seqkit = "*"      # SeqKit for sequence manipulation
+samtools = "*"    # Samtools for file conversion
+
+[tasks]
+simulate = "bash simulate_reads.sh"
+simulate-with-args = "bash simulate_reads.sh"
+clean = "rm -rf output output_* *_simulated custom_prefix 2>/dev/null || true"

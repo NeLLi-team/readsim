@@ -1,0 +1,22 @@
+# Output directories
+*_simulated/
+
+# Pixi environment
+.pixi/
+.pixi
+
+# Temporary files
+ref/
+*.lock
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
